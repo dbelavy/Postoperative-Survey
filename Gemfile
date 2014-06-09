@@ -51,5 +51,6 @@ end
 #Twitter ?
 
 gem 'twitter-bootstrap-rails'
+gem 'therubyracer'
 
 
