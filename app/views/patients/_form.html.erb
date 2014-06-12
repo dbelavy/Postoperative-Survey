@@ -31,10 +31,17 @@
     <%= f.label :senddate %><br>
     <%= f.date_select :senddate %>
   </div>
+  
+  
+  <% if false %>
+  THIS SECTION IS COMMENTED OUT BY THE IF FALSE STUFF.  HIDING IT STOPS THE USER EDITING THE TOKEN.  
   <div class="field">
     <%= f.label :token %><br>
     <%= f.text_field :token %>
   </div>
+  <% end %>
+  
+  
   <div class="actions">
     <%= f.submit %>
   </div>
