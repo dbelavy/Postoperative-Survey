@@ -10,6 +10,12 @@ group :development do
 end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+
+#add bootstrap for sass
+gem 'bootstrap-sass'
+
+
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -30,6 +36,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 #use the browser timezone for datetime
+
 gem 'browser-timezone-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -56,3 +63,10 @@ gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 
 
+# Survey tool
+gem 'rapidfire'
+
+
+
+
+gem 'devise'

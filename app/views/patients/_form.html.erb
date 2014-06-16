@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+<div class="form-group">
+
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -33,14 +35,15 @@
   </div>
   
   
-  <% if false %>
-  THIS SECTION IS COMMENTED OUT BY THE IF FALSE STUFF.  HIDING IT STOPS THE USER EDITING THE TOKEN.  
-  <div class="field">
+     <% if false %>
+      THIS SECTION IS COMMENTED OUT BY THE IF FALSE STUFF.  HIDING IT STOPS THE USER EDITING THE TOKEN.  
+        <div class="field">
     <%= f.label :token %><br>
     <%= f.text_field :token %>
   </div>
-  <% end %>
-  
+     <% end %>
+
+</div>
   
   <div class="actions">
     <%= f.submit %>

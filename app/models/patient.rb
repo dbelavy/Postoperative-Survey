@@ -5,7 +5,10 @@ class Patient < ActiveRecord::Base
   before_create :make_token
   
   def make_token
+    self.token = SecureRandom.urlsafe_base64(6,false)
+    while Patient.exists?(token: self.token)
       self.token = SecureRandom.urlsafe_base64(6,false)
+    end
   end
   
 end
