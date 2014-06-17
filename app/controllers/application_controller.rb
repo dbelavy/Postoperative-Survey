@@ -4,8 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   #put this in for devise and rapidfire
-
-   
    def can_administer?
      user_signed_in?
    end
