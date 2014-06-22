@@ -4,7 +4,16 @@
 <div class="jumbotron">
 
   <h1>Postoperative patient survey</h1> 
-  <%=Rails.application.config.action_mailer.default_url_options%>
+ 
  
   <p>This application is under development.  It will allow doctors to manage postoperative patient surveys.</p>
+  
+  <p>Answer a survey here:   <%= link_to "Survey", rapidfire.root_path %></p>
+  
+  
+  
+  
+  <p>Environment variable:</p>
+  <p>Gmail username: <%= ENV["GMAIL_USERNAME"]%>
+  <p>Environment: <%= ENV["WHICH_ENVIRONMENT_AM_I"]%>
 </div>

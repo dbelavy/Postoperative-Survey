@@ -12,9 +12,8 @@ Rails.application.routes.draw do
 
 
   
-  mount Rapidfire::Engine => "/rapidfire"
-  
-  resources :question_groups
+  mount Rapidfire::Engine => "/rapidfire", as: "rapidfire"
+
   
   
   # Example of regular route:

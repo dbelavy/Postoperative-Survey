@@ -9,12 +9,9 @@ Learning RoR by creating a postoperative patient survey application
 
 
 
-
-
-
-
-
-Insert a Token into the Token field
+Learn to send an email
+Learn to put dynamic data into email
+Learn to schedule email
 
 
 

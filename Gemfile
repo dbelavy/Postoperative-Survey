@@ -14,6 +14,8 @@ gem 'sass-rails', '~> 4.0.3'
 #add bootstrap for sass
 gem 'bootstrap-sass'
 
+#add environment variable management with figaro
+gem 'figaro'
 
 
 # Use Uglifier as compressor for JavaScript assets
@@ -65,7 +67,7 @@ gem 'therubyracer'
 
 # Survey tool
 gem 'rapidfire'
-
+gem 'formtastic'
 
 
 

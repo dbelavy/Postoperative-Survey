@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140615101306) do
+ActiveRecord::Schema.define(version: 20140620034802) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -40,6 +40,9 @@ ActiveRecord::Schema.define(version: 20140615101306) do
     t.string   "token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "datesent"
+    t.datetime "dateremindersent"
+    t.string   "bounce_details"
   end
 
   create_table "rapidfire_answer_groups", force: true do |t|

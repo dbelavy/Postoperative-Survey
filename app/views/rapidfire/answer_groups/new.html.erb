@@ -4,7 +4,8 @@
 <%= form_for([@question_group, @answer_group_builder]) do |f| %>
   <%- @answer_group_builder.answers.each do |answer| %>
     <%= f.fields_for("#{answer.question.id}", answer) do |answer_form| %>
-      <%= render_answer_form_helper(answer, answer_form) %>
+      <p><%= render_answer_form_helper(answer, answer_form) %></p>
+      
     <% end %>
   <% end %>
   <%= f.submit "Save" %>

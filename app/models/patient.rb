@@ -11,4 +11,6 @@ class Patient < ActiveRecord::Base
     end
   end
   
+  
+  
 end
