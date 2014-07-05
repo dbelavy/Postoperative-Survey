@@ -17,8 +17,3 @@
 
 
 
-
-/* This was put in to play with formtastic.  */
-
-  *= require formtastic
-  *= require my_formtastic_changes
