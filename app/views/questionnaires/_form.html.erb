@@ -1,0 +1,37 @@
+<%= simple_form_for(@questionnaire) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :questions_concerns,
+    		collection: [ "Not at all", "Somewhat", "Completely"],
+    		label: 'Before the operation, were your questions and concerns addressed by your anaesthetist?' %>
+    <%= f.input :safe_relaxed, 
+    		collection: [ "Not at all", "Somewhat", "Completely"],
+    		label: 'Before the operation, did you feel safe and relaxed?'%>
+    <%= f.input :pain_management,
+    		collection: [ "Very poor", "Poor", "Acceptable", "Good", "Very good"],
+    		label: 'How would you rate the management of your pain after the operation?'%>
+    <%= f.input :ponv,
+    		collection: [ "None", "Nausea only", "Retching", "Vomit once", "Vomited more than once"],
+    		label: 'Did you have nausea (feeling sick) or vomiting after surgery?'%>
+    <%= f.input :same_anaesthetic,
+    		collection: [ "Definitely not", "Probably not", "Undecided", "Possibly yes", "Definitely yes"],
+    		label: 'If needed, would you have the same anaesthetic and pain relief again?' %>
+    <%= f.input :confident_ability,
+        	collection: [ "Definitely not", "Probably not", "Undecided", "Possibly yes", "Definitely yes"],
+    		label: 'Do you feel confident in the ability of your anaesthetist?' %>
+    <%= f.input :cared_for,
+        	collection: [ "Definitely not", "Probably not", "Undecided", "Possibly yes", "Definitely yes"],
+    		label: 'Did you feel cared for by your anaesthetist?'%>
+    <%= f.input :anaesthetic_experience,
+    		collection: ["Very poor", "Poor", "Acceptable", "Good", "Very good" ],
+    		label: 'How would you rate your anaesthetic experience?'  %>
+    <%= f.input :comments,
+    		label: 'Do you have any other comments for Dr Belavy?'%>
+    <%= f.hidden_field :token, value: params[:token] %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

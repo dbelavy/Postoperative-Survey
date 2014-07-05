@@ -40,6 +40,8 @@ gem 'spring',        group: :development
 #use the browser timezone for datetime
 
 gem 'browser-timezone-rails'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -52,11 +54,7 @@ gem 'browser-timezone-rails'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :production do
-  gem "lograge"
-  gem 'heroku-deflater', '~> 0.5' 
-  gem 'rails_12factor', '~> 0.0'
-end
+
 
 
 #Twitter ?
@@ -68,6 +66,13 @@ gem 'therubyracer'
 # Survey tool
 gem 'rapidfire'
 gem 'formtastic'
+gem 'simple_form'
+
+group :production do
+  gem "lograge"
+  gem 'heroku-deflater', '~> 0.5' 
+  gem 'rails_12factor', '~> 0.0'
+end
 
 
 

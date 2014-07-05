@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  questions_concerns: MyString
+  safe_relaxed: MyString
+  pain_management: MyString
+  ponv: MyString
+  same_anaesthetic: MyString
+  confident_ability: MyString
+  cared_for: MyString
+  anaesthetic_experience: MyString
+  comments: MyString
+  token: MyString
+
+two:
+  questions_concerns: MyString
+  safe_relaxed: MyString
+  pain_management: MyString
+  ponv: MyString
+  same_anaesthetic: MyString
+  confident_ability: MyString
+  cared_for: MyString
+  anaesthetic_experience: MyString
+  comments: MyString
+  token: MyString

@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  resources :questionnaires
+
   devise_for :users
   get 'welcome/index'
-
-  resources :patients, :users
+  
+ 
+  resources :patients, :users, :feedback
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -10,7 +13,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-
+  
   
   mount Rapidfire::Engine => "/rapidfire", as: "rapidfire"
 

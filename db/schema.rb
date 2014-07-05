@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140620034802) do
+ActiveRecord::Schema.define(version: 20140702120743) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -43,6 +43,21 @@ ActiveRecord::Schema.define(version: 20140620034802) do
     t.datetime "datesent"
     t.datetime "dateremindersent"
     t.string   "bounce_details"
+  end
+
+  create_table "questionnaires", force: true do |t|
+    t.string   "questions_concerns"
+    t.string   "safe_relaxed"
+    t.string   "pain_management"
+    t.string   "ponv"
+    t.string   "same_anaesthetic"
+    t.string   "confident_ability"
+    t.string   "cared_for"
+    t.string   "anaesthetic_experience"
+    t.string   "comments"
+    t.string   "token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "rapidfire_answer_groups", force: true do |t|

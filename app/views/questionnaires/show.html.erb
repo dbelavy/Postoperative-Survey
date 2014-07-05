@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Questions concerns:</strong>
+  <%= @questionnaire.questions_concerns %>
+</p>
+
+<p>
+  <strong>Safe relaxed:</strong>
+  <%= @questionnaire.safe_relaxed %>
+</p>
+
+<p>
+  <strong>Pain management:</strong>
+  <%= @questionnaire.pain_management %>
+</p>
+
+<p>
+  <strong>Ponv:</strong>
+  <%= @questionnaire.ponv %>
+</p>
+
+<p>
+  <strong>Same anaesthetic:</strong>
+  <%= @questionnaire.same_anaesthetic %>
+</p>
+
+<p>
+  <strong>Confident ability:</strong>
+  <%= @questionnaire.confident_ability %>
+</p>
+
+<p>
+  <strong>Cared for:</strong>
+  <%= @questionnaire.cared_for %>
+</p>
+
+<p>
+  <strong>Anaesthetic experience:</strong>
+  <%= @questionnaire.anaesthetic_experience %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @questionnaire.comments %>
+</p>
+
+<p>
+  <strong>Token:</strong>
+  <%= @questionnaire.token %>
+</p>
+
+<%= link_to 'Edit', edit_questionnaire_path(@questionnaire) %> |
+<%= link_to 'Back', questionnaires_path %>
