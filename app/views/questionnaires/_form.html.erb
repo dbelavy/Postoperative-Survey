@@ -3,27 +3,43 @@
 
   <div class="form-inputs">
     <%= f.input :questions_concerns,
+  			as: :radio_buttons,
+  			item_wrapper_class: :block_radio_button_collection,
     		collection: [ "Not at all", "Somewhat", "Completely"],
     		label: 'Before the operation, were your questions and concerns addressed by your anaesthetist?' %>
     <%= f.input :safe_relaxed, 
-    		collection: [ "Not at all", "Somewhat", "Completely"],
+  			as: :radio_buttons,
+  			item_wrapper_class: :block_radio_button_collection,
+  			collection: [ "Not at all", "Somewhat", "Completely"],
     		label: 'Before the operation, did you feel safe and relaxed?'%>
     <%= f.input :pain_management,
     		collection: [ "Very poor", "Poor", "Acceptable", "Good", "Very good"],
+  			as: :radio_buttons,
+  			item_wrapper_class: :block_radio_button_collection,
     		label: 'How would you rate the management of your pain after the operation?'%>
     <%= f.input :ponv,
+      		as: :radio_buttons,
+  			item_wrapper_class: :block_radio_button_collection,
     		collection: [ "None", "Nausea only", "Retching", "Vomit once", "Vomited more than once"],
     		label: 'Did you have nausea (feeling sick) or vomiting after surgery?'%>
     <%= f.input :same_anaesthetic,
+      		as: :radio_buttons,
+  			item_wrapper_class: :block_radio_button_collection,
     		collection: [ "Definitely not", "Probably not", "Undecided", "Possibly yes", "Definitely yes"],
     		label: 'If needed, would you have the same anaesthetic and pain relief again?' %>
     <%= f.input :confident_ability,
+      		as: :radio_buttons,
+  			item_wrapper_class: :block_radio_button_collection,
         	collection: [ "Definitely not", "Probably not", "Undecided", "Possibly yes", "Definitely yes"],
     		label: 'Do you feel confident in the ability of your anaesthetist?' %>
     <%= f.input :cared_for,
+      		as: :radio_buttons,
+  			item_wrapper_class: :block_radio_button_collection,
         	collection: [ "Definitely not", "Probably not", "Undecided", "Possibly yes", "Definitely yes"],
     		label: 'Did you feel cared for by your anaesthetist?'%>
     <%= f.input :anaesthetic_experience,
+      		as: :radio_buttons,
+  			item_wrapper_class: :block_radio_button_collection,
     		collection: ["Very poor", "Poor", "Acceptable", "Good", "Very good" ],
     		label: 'How would you rate your anaesthetic experience?'  %>
     <%= f.input :comments,

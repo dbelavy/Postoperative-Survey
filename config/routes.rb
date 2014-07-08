@@ -12,10 +12,12 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
-
   
   
-  mount Rapidfire::Engine => "/rapidfire", as: "rapidfire"
+  #check that this is a secure route - I'm not sure that it can't be called externally
+  post 'invite_mailer/invite_email'
+  
+  #mount Rapidfire::Engine => "/rapidfire", as: "rapidfire"
 
   
   

@@ -12,7 +12,9 @@
       <th>Token</th>
       <th>Request sent</th>
       <th>Reminder sent</th>
-      <th>Bounce details</th>   
+      <th>Bounce details</th>
+      <th>Answered</th>
+      <th>Send invite</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,6 +31,15 @@
         <td><%= patient.datesent%> </td>
         <td><%= patient.dateremindersent%></td>
         <td><%= patient.bounce_details%></td>
+        <% @questionnaire_result_id = Questionnaire.where(token: patient.token).pluck(:id).join %>
+        <td>  <% if Questionnaire.exists?(token: patient.token) %>
+        	    <%= link_to 'Answers', questionnaire_path(:id => @questionnaire_result_id) %>
+        	  <% else %>
+        	  	Nope
+        	  <%end%>	 
+        	
+        	  </td>
+        <td>Send email bit    </td>
         <td><%= link_to 'Show', patient %></td>
         <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
         <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -38,5 +49,8 @@
 </table>
 
 <br>
+
+
+
 
 <%= link_to 'New Patient', new_patient_path %>

@@ -8,11 +8,7 @@ gem 'pg'
 group :development do
   gem 'sqlite3'
 end
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
 
-#add bootstrap for sass
-gem 'bootstrap-sass'
 
 #add environment variable management with figaro
 gem 'figaro'
@@ -59,12 +55,24 @@ gem 'browser-timezone-rails'
 
 #Twitter ?
 
-gem 'twitter-bootstrap-rails'
+#gem 'twitter-bootstrap-rails'
+#add bootstrap for sass
+
+#gem 'bootstrap-sass'
+
+
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 4.0.3'
+
+#recommended for bootstrap sass
+gem 'autoprefixer-rails'
+
+
 gem 'therubyracer'
 
 
 # Survey tool
-gem 'rapidfire'
+#gem 'rapidfire'
 gem 'formtastic'
 gem 'simple_form'
 
@@ -74,6 +82,7 @@ group :production do
   gem 'rails_12factor', '~> 0.0'
 end
 
-
+#was going to try foundation but simpleform has integration with bootstrap, but not with radio buttons
+gem 'foundation-rails'
 
 gem 'devise'

@@ -1,12 +1,16 @@
 class InviteMailer < ActionMailer::Base
   default from: ENV["GMAIL_USERNAME"]
+  default
+  
   
   
 
 
-  def invite_email(patient_to_invite, user)
+  def invite_email(patient_to_invite, user, token)
     @email_details_hash = patient_to_invite
     @user = user
+    @token = token
+    @url = ENV["APPLICATION_URL"] + '/questionnaire/new/?token=' + @token
    # @to = email_details_hash[:email]
     mail(
       to: @email_details_hash["email"],

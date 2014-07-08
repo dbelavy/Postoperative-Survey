@@ -1,6 +1,11 @@
 class QuestionnairesController < ApplicationController
+  # need to add authentication
+  
+  
+  
+  
   before_action :set_questionnaire, only: [:show, :edit, :update, :destroy]
-
+ 
   # GET /questionnaires
   # GET /questionnaires.json
   def index
