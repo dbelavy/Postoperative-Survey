@@ -13,6 +13,7 @@ end
 #add environment variable management with figaro
 gem 'figaro'
 
+gem 'debugger'
 
 gem 'active_model_serializers'
 
