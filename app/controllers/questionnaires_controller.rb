@@ -2,7 +2,7 @@ class QuestionnairesController < ApplicationController
   # need to add authentication
   
   
-  
+  before_action :authenticate_user!, :except => [:new, :create]
   
   before_action :set_questionnaire, only: [:show, :edit, :update, :destroy]
  
@@ -35,8 +35,15 @@ class QuestionnairesController < ApplicationController
 
     respond_to do |format|
       if @questionnaire.save
-        format.html { redirect_to @questionnaire, notice: 'Questionnaire was successfully created.' }
-        format.json { render :show, status: :created, location: @questionnaire }
+        #format.html { redirect_to @questionnaire, notice: 'Questionnaire was successfully created.' }
+        #format.json { render :show, status: :created, location: @questionnaire }
+        
+        format.html {
+          redirect_to '/'
+          flash[:notice_success] = 'Questionnaire was successfully created.' 
+          }
+        format.json { render :show, status: :created, location: '/' }
+        
       else
         format.html { render :new }
         format.json { render json: @questionnaire.errors, status: :unprocessable_entity }

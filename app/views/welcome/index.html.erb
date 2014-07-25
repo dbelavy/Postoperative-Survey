@@ -3,15 +3,13 @@
 
 <div class="jumbotron">
 
+  <% if flash[:notice_success] %>
+    <div class="alert-box success radius"><%= flash[:notice_success] %></div>
+  <% end %>
+
   <h1>Postoperative patient survey</h1> 
- 
- 
-  <p>This application is under development.  It will allow doctors to manage postoperative patient surveys.</p>
+
+  <p>This site manages postoperative surveys for doctors.  If you have received a request to complete a survey, please click the link.</p>
   
-
-  <p>Environment: <%= ENV["RAILS_ENV"]%></p>
-
-  <p>Address: <%= request.original_url %></p>
-
 
 </div>
