@@ -32,7 +32,7 @@
         <td><%= patient.dateremindersent%></td>
         <td><%= patient.bounce_details%></td>
         <% @questionnaire_result_id = Questionnaire.where(token: patient.token).pluck(:id).join %>
-        <td>  <% if Questionnaire.exists?(token: patient.token) %>
+        <td>  <% if Questionnaire.exists?(:token => patient.token) %>
         	    <%= link_to 'Answers', questionnaire_path(:id => @questionnaire_result_id) %>
         	  <% else %>
         	  	Nope

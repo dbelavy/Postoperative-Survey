@@ -32,9 +32,18 @@ class QuestionnairesController < ApplicationController
   # POST /questionnaires.json
   def create
     @questionnaire = Questionnaire.new(questionnaire_params)
+    
 
     respond_to do |format|
-      if @questionnaire.save
+
+      if Questionnaire.exists?(:token => @questionnaire.token)
+          format.html {
+            redirect_to root_path
+            flash[:notice_error] = 'This questionnaire has already been answered.' 
+            }
+          format.json { render json: @questionnaire.errors, status: :unprocessable_entity }
+          
+      elsif @questionnaire.save
         #format.html { redirect_to @questionnaire, notice: 'Questionnaire was successfully created.' }
         #format.json { render :show, status: :created, location: @questionnaire }
         

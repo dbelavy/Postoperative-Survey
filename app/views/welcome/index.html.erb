@@ -6,6 +6,11 @@
   <% if flash[:notice_success] %>
     <div class="alert-box success radius"><%= flash[:notice_success] %></div>
   <% end %>
+  
+  <% if flash[:notice_error] %>
+    <div class="alert-box alert radius"><%= flash[:notice_error] %></div>
+  <% end %>
+
 
   <h1>Postoperative patient survey</h1> 
 
