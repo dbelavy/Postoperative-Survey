@@ -20,7 +20,7 @@ namespace :mail_admin do
         patient.update_attribute(:datesent, DateTime.now)
         
         #puts a message on the console saying it has been done.  This doesn't confirm receipt
-        puts "Invite sent to " + patient.name + "on" + patient.datesent
+        puts "Invite sent to " + patient.name + " on " + patient.datesent.to_s
      
       
       end
