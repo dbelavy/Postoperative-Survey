@@ -39,10 +39,10 @@ class QuestionnairesController < ApplicationController
         #format.json { render :show, status: :created, location: @questionnaire }
         
         format.html {
-          redirect_to '/'
-          flash[:notice_success] = 'Questionnaire was successfully created.' 
+          redirect_to root_path
+          flash[:notice_success] = 'Your responses have been submitted.  Thank you.' 
           }
-        format.json { render :show, status: :created, location: '/' }
+        format.json { render :show, status: :created, location: root_path }
         
       else
         format.html { render :new }
