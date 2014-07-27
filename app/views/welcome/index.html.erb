@@ -4,11 +4,11 @@
 <div class="jumbotron">
 
   <% if flash[:notice_success] %>
-    <div class="alert-box success radius"><%= flash[:notice_success] %></div>
+    <div class="alert-box success radius"><%= flash[:notice_success] %><a href="#" class="close">&times;</a></div>
   <% end %>
   
   <% if flash[:notice_error] %>
-    <div class="alert-box alert radius"><%= flash[:notice_error] %></div>
+    <div class="alert-box alert radius"><%= flash[:notice_error] %><a href="#" class="close">&times;</a></div>
   <% end %>
 
 

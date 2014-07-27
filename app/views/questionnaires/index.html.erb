@@ -13,6 +13,7 @@
       <th>Anaesthetic experience</th>
       <th>Comments</th>
       <th>Token</th>
+      <th>Viewed</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -30,6 +31,7 @@
         <td><%= questionnaire.anaesthetic_experience %></td>
         <td><%= questionnaire.comments %></td>
         <td><%= questionnaire.token %></td>
+        <td><%= questionnaire.answers_read %></td>
         <td><%= link_to 'Show', questionnaire %></td>
         <td><%= link_to 'Edit', edit_questionnaire_path(questionnaire) %></td>
         <td><%= link_to 'Destroy', questionnaire, method: :delete, data: { confirm: 'Are you sure?' } %></td>

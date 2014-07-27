@@ -5,6 +5,8 @@ class QuestionnairesController < ApplicationController
   before_action :authenticate_user!, :except => [:new, :create]
   
   before_action :set_questionnaire, only: [:show, :edit, :update, :destroy]
+  
+  #after_action :  , only: [:show]
  
   # GET /questionnaires
   # GET /questionnaires.json
@@ -15,6 +17,7 @@ class QuestionnairesController < ApplicationController
   # GET /questionnaires/1
   # GET /questionnaires/1.json
   def show
+    @questionnaire.update_attribute(:answers_read, true)
   end
 
   # GET /questionnaires/new

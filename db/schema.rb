@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140719081413) do
+ActiveRecord::Schema.define(version: 20140727050455) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20140719081413) do
     t.string   "token"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "answers_read"
   end
 
   create_table "rapidfire_answer_groups", force: true do |t|
